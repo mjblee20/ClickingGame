@@ -5,6 +5,7 @@ import "./style.css";
 
 class Squares extends Component{
     state = {
+        
         clicked: this.props.new
     }
 
@@ -22,8 +23,8 @@ class Squares extends Component{
     render() {
         return (
             <div className="squares" onClick={this.handleClick}>
-                
-                <h1>{this.props.url}</h1>
+                {console.log(this.props.new)}
+                <h6>{this.props.url}</h6>
                 <Images url={this.props.src} info={this.props.alt}/>
             </div>
         );
