@@ -13,15 +13,15 @@ class PlayField extends Component {
         win: 0,
         loss: 0,
         new: false,
-        randomArr: []
+        randomArr: Data
     }
 
     // resets the game
     reset = () => {
         this.setState({
-            new: false
+            new: true
         })
-        this.randomize();
+        this.randomize(Data);
     }
 
     componentDidMount() {
@@ -46,28 +46,31 @@ class PlayField extends Component {
     victory = () => {
         console.log("win");
         this.setState({
-            new: true,
+            // new: true,
             win: this.state.win + 1,
             score: 0
         })
-        this.randomize(Data);
+        this.reset();
     }
 
     // increment loss if guess incorrectly
     defeat = () => {
         console.log("loss");
         this.setState({
-            new: true,
+            // new: true,
             loss: this.state.loss + 1,
             score: 0
         })
-        this.randomize(Data);
+        this.reset();
     }
 
     increment = () => {
         // if all have been guessed correctly
-        
-        console.log(this.state.score);
+        this.setState({
+            score: this.state.score + 1
+        })
+
+        // if all images have been clicked no more than once player wins
         if (this.state.score === 11) {
             this.victory();
         }
@@ -76,14 +79,11 @@ class PlayField extends Component {
 
     // once the user clicks an image div. Check if they have guessed correctly
     // correct is when clicked state is false on the image that was clicked.
-    checkGuess = correct => {
-        if (correct) {
-            this.setState({
-                score: this.state.score + 1
-            })
-            this.increment()
-        } else {
+    checkGuess = isClicked => {
+        if (isClicked) {
             this.defeat()
+        } else {
+            this.increment()
         }
     }
 
@@ -99,7 +99,6 @@ class PlayField extends Component {
                         {
                             /* Iterate through the randomized data.json array and rendering image divs */
                             this.state.randomArr.map((element, i) => {
-                                // Data.map()
                                 return (
                                     <Squares 
                                         key = {i}

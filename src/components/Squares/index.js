@@ -5,14 +5,13 @@ import "./style.css";
 
 class Squares extends Component{
     state = {
-        
-        clicked: this.props.new
+        clicked: false
     }
 
     handleClick = () => {
         {   
             console.log("handleclick squares");
-            let clicked = this.state.clicked ? false : true;
+            let clicked = this.state.clicked ? true : false;
             this.setState({
                 clicked: true
             });
@@ -23,7 +22,6 @@ class Squares extends Component{
     render() {
         return (
             <div className="squares" onClick={this.handleClick}>
-                {console.log(this.props.new)}
                 <h6>{this.props.url}</h6>
                 <Images url={this.props.src} info={this.props.alt}/>
             </div>
