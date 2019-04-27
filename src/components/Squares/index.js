@@ -8,21 +8,11 @@ class Squares extends Component{
         clicked: false
     }
 
-    handleClick = () => {
-        {   
-            console.log("handleclick squares");
-            let clicked = this.state.clicked ? true : false;
-            this.setState({
-                clicked: true
-            });
-            this.props.onClick(clicked);
-        }
-    }
-
     render() {
         return (
-            <div className="squares" onClick={this.handleClick}>
-                <h6>{this.props.url}</h6>
+            <div className="squares" value={this.props.id} 
+            onClick={() => this.props.handleClick(this.props.id)}>
+                <h6>{this.props.id}</h6>
                 <Images url={this.props.src} info={this.props.alt}/>
             </div>
         );

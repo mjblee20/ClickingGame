@@ -12,19 +12,18 @@ class PlayField extends Component {
         score: 0,
         win: 0,
         loss: 0,
-        new: false,
-        randomArr: Data
+        randomArr: Data,
+        clicked: []
     }
 
     // resets the game
     reset = () => {
         this.setState({
-            currentScore: 0,
-            topScore: this.state.topScore,
-            correctIncorrect: "You guessed incorrectly!",
+            score: 0,
+            randomArr: Data,
             clicked: []
-          });
-          this.randomize(Data);
+        });
+        this.randomize(Data);
     }
 
     componentDidMount() {
@@ -34,22 +33,38 @@ class PlayField extends Component {
     // shuffles the order of the data array from data.json
     // this function is only called when game is restarted
     randomize = array => {
+        console.log("shuffles image orders");
         let newArr = array;
         for (let i = newArr.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [newArr[i], newArr[j]] = [newArr[j], newArr[i]];
         }
-        console.log("shuffles image orders");
         this.setState({
             randomArr: newArr
         })
+    }
+
+    // once the user clicks an image div. Check if they have guessed correctly
+    // correct guesses won't have their id in the clicked array
+    handleClick = id => {
+        console.log("clicked")
+        
+        if (this.state.clicked.indexOf(id) === -1) {
+            this.increment();
+            this.setState({ 
+                clicked: this.state.clicked.concat(id) 
+            });
+        } else {
+            this.defeat();
+        }
+          console.log(this.state.clicked);
+        console.log("handleclick squares");
     }
 
     // increment win if all guessed correctly
     victory = () => {
         console.log("win");
         this.setState({
-            // new: true,
             win: this.state.win + 1,
             score: 0
         })
@@ -60,7 +75,6 @@ class PlayField extends Component {
     defeat = () => {
         console.log("loss");
         this.setState({
-            // new: true,
             loss: this.state.loss + 1,
             score: 0
         })
@@ -68,11 +82,11 @@ class PlayField extends Component {
     }
 
     increment = () => {
+        console.log("increment");
         // if all have been guessed correctly
         this.setState({
             score: this.state.score + 1
         })
-
         // if all images have been clicked no more than once player wins
         if (this.state.score === 11) {
             this.victory();
@@ -80,15 +94,6 @@ class PlayField extends Component {
         this.randomize(Data);
     }
 
-    // once the user clicks an image div. Check if they have guessed correctly
-    // correct is when clicked state is false on the image that was clicked.
-    checkGuess = isClicked => {
-        if (isClicked) {
-            this.defeat()
-        } else {
-            this.increment()
-        }
-    }
 
     render() {
         return (
@@ -105,11 +110,10 @@ class PlayField extends Component {
                                 return (
                                     <Squares 
                                         key = {i}
-                                        onClick={this.checkGuess} 
-                                        url = {element.url} 
+                                        handleClick={this.handleClick}
+                                        id = {element.id} 
                                         src = {element.src} 
                                         alt = {element.alt}
-                                        new = {this.state.new}
                                     />
                                 );
                             })
