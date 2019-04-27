@@ -19,9 +19,12 @@ class PlayField extends Component {
     // resets the game
     reset = () => {
         this.setState({
-            new: true
-        })
-        this.randomize(Data);
+            currentScore: 0,
+            topScore: this.state.topScore,
+            correctIncorrect: "You guessed incorrectly!",
+            clicked: []
+          });
+          this.randomize(Data);
     }
 
     componentDidMount() {

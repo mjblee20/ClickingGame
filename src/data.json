@@ -1,51 +1,51 @@
 [
     {
-        "url": 1,
-        "src": "https://via.placeholder.com/150",
+        "id": 1,
+        "src": "../../../images/carbotMarine.jpg",
         "alt": "Carbot Marine"
     }, {
-        "url": 2,
-        "src": "https://via.placeholder.com/150",
+        "id": 2,
+        "src": "../../../images/carbotZergling.jpg",
         "alt": "Carbot Zergling"
     }, {
-        "url": 3,
-        "src": "https://via.placeholder.com/150",
+        "id": 3,
+        "src": "../../../images/carbotZealot.jpeg",
         "alt": "Carbot Zealot"
     }, {
-        "url": 4,
-        "src": "https://via.placeholder.com/150",
+        "id": 4,
+        "src": "../../../images/carbotMarauder.jpg",
         "alt": "Carbot Marauder"
     }, {
-        "url": 5,
-        "src": "https://via.placeholder.com/150",
+        "id": 5,
+        "src": "../../../images/carbotHydralisk.png",
         "alt": "Carbot Hydralisk"
     }, {
-        "url": 6,
-        "src": "https://via.placeholder.com/150",
+        "id": 6,
+        "src": "../../../images/carbotStalker.jpg",
         "alt": "Carbot Stalker"
     }, {
-        "url": 7,
-        "src": "https://via.placeholder.com/150",
+        "id": 7,
+        "src": "../../../images/carbotHellbat.png",
         "alt": "Carbot Hellbat"
     }, {
-        "url": 8,
-        "src": "https://via.placeholder.com/150",
+        "id": 8,
+        "src": "../../../images/carbotInfestor.png",
         "alt": "Carbot Infestor"
     }, {
-        "url": 9,
-        "src": "https://via.placeholder.com/150",
+        "id": 9,
+        "src": "../../../images/carbotImmortal.png",
         "alt": "Carbot Immortal"
     }, {
-        "url": 10,
-        "src": "https://via.placeholder.com/150",
+        "id": 10,
+        "src": "../../../images/carbotThor.png",
         "alt": "Carbot Thor"
     }, {
-        "url": 11,
-        "src": "https://via.placeholder.com/150",
+        "id": 11,
+        "src": "../../../images/carbotUltra.png",
         "alt": "Carbot Ultralisk"
     }, {
-        "url": 12,
-        "src": "https://via.placeholder.com/150",
+        "id": 12,
+        "src": "../../../images/carbotArchon.jpg",
         "alt": "Carbot Archon"
     }
 ]
