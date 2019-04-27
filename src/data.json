@@ -1,51 +1,51 @@
 [
     {
         "id": 1,
-        "src": "./build/images/carbotMarine.jpg",
+        "src": "/build/images/carbotMarine.jpg",
         "alt": "Carbot Marine"
     }, {
         "id": 2,
-        "src": "./build/images/carbotZergling.jpg",
+        "src": "/build/images/carbotZergling.jpg",
         "alt": "Carbot Zergling"
     }, {
         "id": 3,
-        "src": "./build/images/carbotZealot.jpeg",
+        "src": "/build/images/carbotZealot.jpeg",
         "alt": "Carbot Zealot"
     }, {
         "id": 4,
-        "src": "./build/images/carbotMarauder.jpg",
+        "src": "/build/images/carbotMarauder.jpg",
         "alt": "Carbot Marauder"
     }, {
         "id": 5,
-        "src": "./build/images/carbotHydralisk.png",
+        "src": "/build/images/carbotHydralisk.png",
         "alt": "Carbot Hydralisk"
     }, {
         "id": 6,
-        "src": "./build/images/carbotStalker.jpg",
+        "src": "/build/images/carbotStalker.jpg",
         "alt": "Carbot Stalker"
     }, {
         "id": 7,
-        "src": "./build/images/carbotHellbat.png",
+        "src": "/build/images/carbotHellbat.png",
         "alt": "Carbot Hellbat"
     }, {
         "id": 8,
-        "src": "./build/images/carbotInfestor.png",
+        "src": "/build/images/carbotInfestor.png",
         "alt": "Carbot Infestor"
     }, {
         "id": 9,
-        "src": "./build/images/carbotImmortal.png",
+        "src": "/build/images/carbotImmortal.png",
         "alt": "Carbot Immortal"
     }, {
         "id": 10,
-        "src": "./build/images/carbotThor.png",
+        "src": "/build/images/carbotThor.png",
         "alt": "Carbot Thor"
     }, {
         "id": 11,
-        "src": "./build/images/carbotUltra.png",
+        "src": "/build/images/carbotUltra.png",
         "alt": "Carbot Ultralisk"
     }, {
         "id": 12,
-        "src": "./build/images/carbotArchon.jpg",
+        "src": "/build/images/carbotArchon.jpg",
         "alt": "Carbot Archon"
     }
 ]
