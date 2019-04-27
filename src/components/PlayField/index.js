@@ -3,7 +3,6 @@ import Squares from "../Squares";
 import Row from '../Row';
 import Col from '../Col';
 import Data from "../../data.json";
-import Button from "../Button";
 import "./style.css";
 
 class PlayField extends Component {
@@ -119,9 +118,6 @@ class PlayField extends Component {
                             })
                         }
                     </Col>
-                </Row>
-                <Row>
-                    <Button onClick={this.randomize}>Click me to restart!</Button>
                 </Row>
             </div>  
         );
