@@ -1,4 +1,5 @@
 #Clicky-Game
+
 [Game can be played here!](https://mjblee20.github.io/clickinggame/)
 
 ## Description
@@ -15,8 +16,6 @@ Install npx
 
 Create a React.js App
 `npx create-react-app [app-name]`
-
-## Public
 
 
 
